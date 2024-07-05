@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>APLICATIVO TESTE PARA A DANI</h1>
+    <div class="container">
+        <h1>Agendamento Online</h1>
+        <div class="modalidade">
+            <h2>Modalidade 1</h2>
+            <p>Vagas disponíveis: <span id="vagas1">10</span></p>
+            <button onclick="mostrarFormulario('vagas1')">Agendar</button>
+        </div>
+        <div class="modalidade">
+            <h2>Modalidade 2</h2>
+            <p>Vagas disponíveis: <span id="vagas2">10</span></p>
+            <button onclick="mostrarFormulario('vagas2')">Agendar</button>
+        </div>
+        <div class="modalidade">
+            <h2>Modalidade 3</h2>
+            <p>Vagas disponíveis: <span id="vagas3">10</span></p>
+            <button onclick="mostrarFormulario('vagas3')">Agendar</button>
+        </div>
+    </div>
+
+    <div id="formulario-agendamento" class="form-container" style="display: none;">
+        <h2>Agendar</h2>
+        <form id="agendamentoForm">
+            <input type="hidden" id="modalidadeSelecionada" name="modalidadeSelecionada">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular" required>
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes"></textarea>
+            <button type="submit">Confirmar Agendamento</button>
+        </form>
+    </div>
+
+    <div id="agendamentos" class="agendamentos-container">
+        <h2>Agendamentos Realizados</h2>
+        <ul id="lista-agendamentos"></ul>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
